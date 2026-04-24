@@ -119,7 +119,7 @@ a {
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   padding: 28px 0 48px;
@@ -266,7 +266,21 @@ a {
 
 .hero-panel {
   display: grid;
+  place-items: center;
+  align-content: center;
   gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 30px;
+  display: block;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .panel-card {
@@ -553,9 +567,9 @@ a {
 /* Scrolling Ribbon */
 .scrolling-ribbon {
   position: relative;
-  width: min(100%, 920px);
-  max-width: 920px;
-  margin: 40px auto;
+  width: 100%;
+  grid-column: 1 / -1;
+  margin: 40px 0;
   overflow: hidden;
   background: var(--color-primary);
   color: var(--color-primary-text);
