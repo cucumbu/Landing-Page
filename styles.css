@@ -60,7 +60,8 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding-bottom: 18px;
+  min-height: 96px;
+  padding-bottom: 8px;
 }
 
 .brand {
@@ -81,11 +82,12 @@ a {
   text-transform: uppercase;
 }
 
-.brand-name {
-  font-size: 1.25rem;
+..brand-name {
+  font-size: 1.75rem;
   font-weight: 900;
   text-transform: lowercase;
   letter-spacing: -0.05em;
+  line-height: 1;
 }
 
 .site-nav {
