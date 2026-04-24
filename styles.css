@@ -586,11 +586,22 @@ a {
 }
 
 .ribbon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   flex-shrink: 0;
+}
+
+.ribbon-item img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(0.14) saturate(14);
 }
 
 @media (max-width: 720px) {
