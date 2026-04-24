@@ -91,6 +91,10 @@ a {
   text-transform: lowercase;
   letter-spacing: -0.05em;
   line-height: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .site-nav {
