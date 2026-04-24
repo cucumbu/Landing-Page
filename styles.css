@@ -553,27 +553,27 @@ a {
 /* Scrolling Ribbon */
 .scrolling-ribbon {
   position: relative;
-  width: 100vw;
-  left: calc(50% - 50vw);
+  width: min(100%, 920px);
+  max-width: 920px;
+  margin: 40px auto;
   overflow: hidden;
   background: var(--color-primary);
   color: var(--color-primary-text);
-  padding: 28px 0;
-  margin: 48px 0;
+  padding: 18px 24px;
   border-radius: 9999px;
   box-sizing: border-box;
 }
 
 .ribbon-content {
-  display: flex;
-  gap: 32px;
+  display: inline-flex;
+  gap: 24px;
   animation: scroll-left 30s linear infinite;
   will-change: transform;
 }
 
 .ribbon-item {
   white-space: nowrap;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   flex-shrink: 0;
