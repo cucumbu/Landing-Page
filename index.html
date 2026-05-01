@@ -43,7 +43,7 @@
               time.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#get-started">Start with beta</a>
+              <button class="button button-primary" onclick="document.getElementById('beta-modal').style.display='flex'">Start with beta</button>
               <a class="button button-secondary" href="#features">See features</a>
             </div>
           </div>
@@ -190,5 +190,88 @@
         <p>© 2026 Cucumbu. Built to make workspace AI feel like a real partner.</p>
       </footer>
     </div>
+
+    <!-- Beta Signup Modal -->
+    <div id="beta-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="document.getElementById('beta-modal').style.display='none'">×</span>
+        <h2>Join Beta</h2>
+        <p>Get early access to Cucumbu and be among the first to transform your workspace with autonomous AI.</p>
+        <form id="beta-form" method="POST" action="backend/beta-signup.php">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company/Organization</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="role">Your Role</label>
+            <input type="text" id="role" name="role" placeholder="e.g., Product Manager, Developer, CEO">
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your use case (optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="button button-primary">Join Beta</button>
+        </form>
+        <div id="form-message" style="display:none; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
+      </div>
+    </div>
+
+    <script>
+      // Handle form submission
+      document.getElementById('beta-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const messageDiv = document.getElementById('form-message');
+        
+        try {
+          const response = await fetch('backend/beta-signup.php', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const data = await response.json();
+          
+          if (data.success) {
+            messageDiv.style.display = 'block';
+            messageDiv.style.backgroundColor = '#d4edda';
+            messageDiv.style.color = '#155724';
+            messageDiv.textContent = 'Welcome to the beta! Check your email for next steps.';
+            document.getElementById('beta-form').reset();
+            setTimeout(() => {
+              document.getElementById('beta-modal').style.display = 'none';
+              messageDiv.style.display = 'none';
+            }, 3000);
+          } else {
+            messageDiv.style.display = 'block';
+            messageDiv.style.backgroundColor = '#f8d7da';
+            messageDiv.style.color = '#721c24';
+            messageDiv.textContent = data.message || 'Something went wrong. Please try again.';
+          }
+        } catch (error) {
+          messageDiv.style.display = 'block';
+          messageDiv.style.backgroundColor = '#f8d7da';
+          messageDiv.style.color = '#721c24';
+          messageDiv.textContent = 'Error submitting form. Please try again.';
+          console.error('Error:', error);
+        }
+      });
+
+      // Close modal when clicking outside
+      window.onclick = function(event) {
+        const modal = document.getElementById('beta-modal');
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    </script>
   </body>
 </html>
