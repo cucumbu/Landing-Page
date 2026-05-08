@@ -236,7 +236,7 @@ For issues:
 1. Check relevant documentation file
 2. Check `README.md` troubleshooting section
 3. Review error messages in console
-4. Contact: hello@cucumbu.ai
+4. Contact: team@cucumbu.com
 
 ## 🎉 You're All Set!
 

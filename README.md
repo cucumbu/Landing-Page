@@ -1,4 +1,4 @@
-# Cucumbu Landing Page - Next.js + TypeScript Migration
+# cucumbu Landing Page - Next.js + TypeScript Migration
 
 This project has been migrated from PHP to a modern **Next.js 14 + TypeScript** stack with **Prisma** for database management.
 
@@ -236,7 +236,7 @@ For detailed API documentation, see [API_DOCS.md](./API_DOCS.md) (if available).
 
 ## License
 
-© 2026 Cucumbu. All rights reserved.
+&copy; 2026 cucumbu. All rights reserved.
 
 ## Support
 

@@ -28,7 +28,10 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
       const data = await response.json()
 
       if (data.success) {
-        setMessage({ success: true, text: 'Sign up successful. We will notify you once Cucumbu is available in beta.' })
+        setMessage({
+          success: true,
+          text: 'Sign up successful. We will notify you once cucumbu is available in beta.',
+        })
         ;(e.target as HTMLFormElement).reset()
         setTimeout(() => {
           onClose()
@@ -50,59 +53,39 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
   return (
     <div className={styles.modal} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.modalClose} onClick={onClose}>×</button>
+        <button className={styles.modalClose} onClick={onClose}>
+          &times;
+        </button>
         <h2>Join Beta</h2>
-        <p>Get early access to Cucumbu and be among the first to transform your workspace with autonomous AI.</p>
+        <p>Get early access to cucumbu and be among the first to transform your workspace with autonomous AI.</p>
 
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name">Full Name *</label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              required 
-            />
+            <input type="text" id="name" name="name" required />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="email">Email Address *</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required 
-            />
+            <input type="email" id="email" name="email" required />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="company">Company/Organization</label>
-            <input 
-              type="text" 
-              id="company" 
-              name="company" 
-            />
+            <input type="text" id="company" name="company" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="role">Your Role</label>
-            <input 
-              type="text" 
-              id="role" 
-              name="role" 
+            <input
+              type="text"
+              id="role"
+              name="role"
               placeholder="e.g., Product Manager, Developer, CEO"
             />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="message">Tell us about your use case (optional)</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              rows={4}
-            />
+            <textarea id="message" name="message" rows={4} />
           </div>
-          <button 
-            type="submit" 
-            className={styles.submitButton}
-            disabled={isLoading}
-          >
+          <button type="submit" className={styles.submitButton} disabled={isLoading}>
             {isLoading ? 'Joining...' : 'Join Beta'}
           </button>
         </form>

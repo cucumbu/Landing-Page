@@ -51,17 +51,13 @@ export default function Home() {
           <a href="#features">features</a>
           <a href="#how-it-works">how it works</a>
           <a href="#integrations">integrations</a>
-          <button 
-            className={styles.navCta}
-            onClick={() => setIsModalOpen(true)}
-          >
+          <button className={styles.navCta} onClick={() => setIsModalOpen(true)}>
             join beta
           </button>
         </nav>
       </header>
 
       <main>
-        {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.heroCopy}>
             <h1>autonomous AI for your workspace</h1>
@@ -71,28 +67,40 @@ export default function Home() {
               focused and brainstrong.
             </p>
             <div className={styles.heroActions}>
-              <button 
+              <button
                 className={`${styles.button} ${styles.buttonPrimary}`}
                 onClick={() => setIsModalOpen(true)}
               >
-                Start free trial
+                Start with beta
               </button>
-              <a className={`${styles.button} ${styles.buttonSecondary}`} href="mailto:hello@cucumbu.ai">Book a demo</a>
+              <a
+                className={`${styles.button} ${styles.buttonSecondary}`}
+                href="mailto:team@cucumbu.com"
+              >
+                Book a demo
+              </a>
             </div>
             <div className={styles.heroSubtext}>
               <span className={styles.heroSubtextItem}>
                 <AzureLogo size={16} />
                 <span>Backed by Microsoft Azure</span>
               </span>
-              <span className={styles.heroSubtextDot} aria-hidden="true">·</span>
+              <span className={styles.heroSubtextDot} aria-hidden="true">
+                &middot;
+              </span>
               <span>No credit card</span>
-              <span className={styles.heroSubtextDot} aria-hidden="true">·</span>
+              <span className={styles.heroSubtextDot} aria-hidden="true">
+                &middot;
+              </span>
               <span>500+ teams</span>
             </div>
           </div>
           <div className={styles.heroPanel}>
             <video className={styles.heroVideo} autoPlay muted loop playsInline>
-              <source src="https://user-cdn.hackclub-assets.com/019dbfed-e030-7f2a-ab7e-f9495e605c43/Join%20Waitlist.mp4" type="video/mp4" />
+              <source
+                src="https://user-cdn.hackclub-assets.com/019dbfed-e030-7f2a-ab7e-f9495e605c43/Join%20Waitlist.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className={styles.scrollingRibbon}>
@@ -129,13 +137,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
         <section id="features" className={`${styles.section} ${styles.sectionFeatures}`}>
           <div className={styles.sectionIntro}>
             <p className={styles.sectionEyebrow}>built for modern teams</p>
             <h2>Everything your digital assistant should already do.</h2>
             <p>
-              One agent, all your tools. Cucumbu connects with your workflow,
+              One agent, all your tools. cucumbu connects with your workflow,
               automates the busywork, and keeps your memory safe so every next
               task is smarter than the last.
             </p>
@@ -146,7 +153,7 @@ export default function Home() {
               <span className={styles.featureTag}>Meetings</span>
               <h3>Join calls like a teammate</h3>
               <p>
-                Launch Cucumbu into Google Meet, Teams, or Zoom and get live
+                Launch cucumbu into Google Meet, Teams, or Zoom and get live
                 context, questions, and follow ups without missing the flow.
               </p>
             </article>
@@ -162,7 +169,7 @@ export default function Home() {
               <span className={styles.featureTag}>Memory</span>
               <h3>Learn from you forever</h3>
               <p>
-                Cucumbu stores what matters, adapts to your style, and keeps the
+                cucumbu stores what matters, adapts to your style, and keeps the
                 workflow consistent across every tool.
               </p>
             </article>
@@ -177,7 +184,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* How It Works Section */}
         <section id="how-it-works" className={`${styles.section} ${styles.sectionProcess}`}>
           <div className={styles.sectionIntro}>
             <p className={styles.sectionEyebrow}>how it works</p>
@@ -197,7 +203,7 @@ export default function Home() {
               <span className={styles.stepNumber}>2</span>
               <h3>It acts on your tools</h3>
               <p>
-                Cucumbu integrates with your workspace, executes tasks, and keeps
+                cucumbu integrates with your workspace, executes tasks, and keeps
                 the whole team in sync.
               </p>
             </div>
@@ -212,7 +218,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Integrations Section */}
         <section id="integrations" className={`${styles.section} ${styles.sectionIntegrations}`}>
           <div className={styles.sectionIntro}>
             <p className={styles.sectionEyebrow}>integrations</p>
@@ -236,28 +241,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section id="get-started" className={`${styles.section} ${styles.sectionCta}`}>
           <div className={styles.ctaCard}>
             <div>
               <p className={styles.sectionEyebrow}>ready to build smarter?</p>
-              <h2>Bring Cucumbu into your workspace today.</h2>
+              <h2>Bring cucumbu into your workspace today.</h2>
               <p>
                 Early access for teams who want an assistant that actually learns
                 from them, not just follows rules.
               </p>
             </div>
-            <a className={`${styles.button} ${styles.buttonPrimary} ${styles.buttonLarge}`} href="mailto:hello@cucumbu.ai">Join early access</a>
+            <a
+              className={`${styles.button} ${styles.buttonPrimary} ${styles.buttonLarge}`}
+              href="mailto:team@cucumbu.com"
+            >
+              Join early access
+            </a>
           </div>
         </section>
       </main>
 
       <footer className={styles.siteFooter}>
-        <p>© 2026 Cucumbu. Built to make workspace AI feel like a real partner.</p>
+        <p>&copy; 2026 cucumbu. Built to make workspace AI feel like a real partner.</p>
         <a href="mailto:team@cucumbu.com">team@cucumbu.com</a>
       </footer>
 
-      {/* Beta Modal */}
       <BetaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )

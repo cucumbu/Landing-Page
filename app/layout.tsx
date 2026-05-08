@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Cucumbu | Autonomous AI Workspace Agent',
-  description: 'Cucumbu turns your workspace into a smart assistant that joins meetings, writes emails, manages tasks, and learns from you over time.',
+  title: 'cucumbu | Autonomous AI Workspace Agent',
+  description: 'cucumbu turns your workspace into a smart assistant that joins meetings, writes emails, manages tasks, and learns from you over time.',
 }
 
 export default function RootLayout({

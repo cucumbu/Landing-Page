@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🚀 Cucumbu Landing Page - Quick Start Setup"
+echo "🚀 cucumbu Landing Page - Quick Start Setup"
 echo "==========================================="
 echo ""
 
