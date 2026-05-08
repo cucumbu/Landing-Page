@@ -552,6 +552,18 @@
     font-size: 1rem;
   }
 
+  .siteNav {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 10px;
+  }
+
+  .siteNav a,
+  .navCta {
+    width: fit-content;
+  }
+
   .heroSection {
     padding-top: 16px;
   }
