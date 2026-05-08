@@ -54,19 +54,35 @@ export default function Home() {
             </video>
           </div>
           <div className={styles.scrollingRibbon}>
-            <div className={styles.ribbonContent}>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Gmail logo" /><span>Gmail</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/google-drive.svg" alt="Google Drive logo" /><span>Google Drive</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftteams.svg" alt="Microsoft Teams logo" /><span>Microsoft Teams</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/slack.svg" alt="Slack logo" /><span>Slack</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/zoom.svg" alt="Zoom logo" /><span>Zoom</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlecalendar.svg" alt="Google Calendar logo" /><span>Google Calendar</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Outlook logo" /><span>Outlook</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" alt="Notion logo" /><span>Notion</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg" alt="Salesforce logo" /><span>Salesforce</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/asana.svg" alt="Asana logo" /><span>Asana</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dropbox.svg" alt="Dropbox logo" /><span>Dropbox</span></span>
-              <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/figma.svg" alt="Figma logo" /><span>Figma</span></span>
+            <div className={styles.ribbonTrack}>
+              <div className={styles.ribbonContent}>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Gmail logo" /><span>Gmail</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googledrive.svg" alt="Google Drive logo" /><span>Google Drive</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftteams.svg" alt="Microsoft Teams logo" /><span>Microsoft Teams</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/slack.svg" alt="Slack logo" /><span>Slack</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/zoom.svg" alt="Zoom logo" /><span>Zoom</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlecalendar.svg" alt="Google Calendar logo" /><span>Google Calendar</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Outlook logo" /><span>Outlook</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" alt="Notion logo" /><span>Notion</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg" alt="Salesforce logo" /><span>Salesforce</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/asana.svg" alt="Asana logo" /><span>Asana</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dropbox.svg" alt="Dropbox logo" /><span>Dropbox</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/figma.svg" alt="Figma logo" /><span>Figma</span></span>
+              </div>
+              <div className={styles.ribbonContent} aria-hidden="true">
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="" /><span>Gmail</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googledrive.svg" alt="" /><span>Google Drive</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftteams.svg" alt="" /><span>Microsoft Teams</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/slack.svg" alt="" /><span>Slack</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/zoom.svg" alt="" /><span>Zoom</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlecalendar.svg" alt="" /><span>Google Calendar</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="" /><span>Outlook</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/notion.svg" alt="" /><span>Notion</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg" alt="" /><span>Salesforce</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/asana.svg" alt="" /><span>Asana</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dropbox.svg" alt="" /><span>Dropbox</span></span>
+                <span className={styles.ribbonItem}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/figma.svg" alt="" /><span>Figma</span></span>
+              </div>
             </div>
           </div>
         </section>
@@ -159,6 +175,11 @@ export default function Home() {
           <div className={styles.sectionIntro}>
             <p className={styles.sectionEyebrow}>integrations</p>
             <h2>Native support for the tools your team already uses.</h2>
+            <p>
+              At launch, support will start with a focused set of core apps, so
+              not every integration shown or requested will be available on day
+              one.
+            </p>
           </div>
 
           <div className={styles.integrationGrid}>
@@ -191,6 +212,7 @@ export default function Home() {
 
       <footer className={styles.siteFooter}>
         <p>© 2026 Cucumbu. Built to make workspace AI feel like a real partner.</p>
+        <a href="mailto:team@cucumbu.com">team@cucumbu.com</a>
       </footer>
 
       {/* Beta Modal */}

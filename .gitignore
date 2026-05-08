@@ -35,3 +35,5 @@ yarn-error.log*
 # prisma
 .env
 prisma/migrations/
+
+simple-icons-16.18.1.tgz

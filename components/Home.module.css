@@ -206,11 +206,18 @@
   box-sizing: border-box;
 }
 
-.ribbonContent {
-  display: inline-flex;
-  gap: 24px;
+.ribbonTrack {
+  display: flex;
+  width: max-content;
   animation: scrollLeft 30s linear infinite;
   will-change: transform;
+}
+
+.ribbonContent {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+  padding-right: 24px;
 }
 
 @keyframes scrollLeft {
@@ -396,6 +403,18 @@
   border-top: 1px solid rgba(14, 15, 12, 0.08);
   text-align: center;
   color: var(--color-muted);
+}
+
+.siteFooter a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--color-primary-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.siteFooter a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1200px) {

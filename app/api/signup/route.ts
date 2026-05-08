@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Welcome to the beta! Check your email for next steps.',
+        message: 'Sign up successful. We will notify you once Cucumbu is available in beta.',
         data: signup
       },
       { status: 201 }

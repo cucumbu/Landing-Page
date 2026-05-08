@@ -28,7 +28,7 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
       const data = await response.json()
 
       if (data.success) {
-        setMessage({ success: true, text: 'Welcome to the beta! Check your email for next steps.' })
+        setMessage({ success: true, text: 'Sign up successful. We will notify you once Cucumbu is available in beta.' })
         ;(e.target as HTMLFormElement).reset()
         setTimeout(() => {
           onClose()
@@ -108,7 +108,7 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
         </form>
 
         {message && (
-          <div className={`${styles.formMessage} ${message.success ? styles.success : styles.error}`}>
+          <div className={`${styles.messagePopup} ${message.success ? styles.success : styles.error}`}>
             {message.text}
           </div>
         )}

@@ -240,4 +240,4 @@ For detailed API documentation, see [API_DOCS.md](./API_DOCS.md) (if available).
 
 ## Support
 
-For issues or questions, contact: hello@cucumbu.ai
+For issues or questions, contact: team@cucumbu.com
