@@ -92,7 +92,7 @@ export default function Home() {
               <span className={styles.heroSubtextDot} aria-hidden="true">
                 &middot;
               </span>
-              <span>500+ teams</span>
+              <span>500+ Hours Saved</span>
             </div>
           </div>
           <div className={styles.heroPanel}>
