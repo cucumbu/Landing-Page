@@ -88,9 +88,10 @@
 .heroSection {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 28px;
+  column-gap: 28px;
+  row-gap: 12px;
   align-items: start;
-  padding: 28px 0 48px;
+  padding: 28px 0 40px;
 }
 
 .heroCopy {
@@ -133,6 +134,31 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 24px;
+}
+
+.heroSubtext {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: var(--color-subtle);
+  font-weight: 600;
+  font-feature-settings: "calt" 1;
+}
+
+.heroSubtextItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-muted);
+}
+
+.heroSubtextDot {
+  color: #d9ddd6;
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 .button {
@@ -197,7 +223,7 @@
   position: relative;
   width: 100%;
   grid-column: 1 / -1;
-  margin: 40px 0;
+  margin: 8px 0 0;
   overflow: hidden;
   background: var(--color-primary);
   color: var(--color-primary-text);
@@ -419,8 +445,9 @@
 
 @media (max-width: 1200px) {
   .heroSection {
-    gap: 24px;
-    padding: 24px 0 44px;
+    column-gap: 24px;
+    row-gap: 10px;
+    padding: 24px 0 36px;
   }
 
   .heroSection h1 {
@@ -431,6 +458,7 @@
 @media (max-width: 1024px) {
   .heroSection {
     grid-template-columns: 1fr;
+    row-gap: 14px;
   }
 
   .heroPanel {
@@ -459,8 +487,9 @@
 
 @media (max-width: 840px) {
   .heroSection {
-    gap: 20px;
-    padding: 20px 0 36px;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding: 20px 0 30px;
   }
 
   .heroText {
@@ -498,13 +527,19 @@
     flex-direction: column;
   }
 
+  .heroSubtext {
+    justify-content: center;
+    text-align: center;
+  }
+
   .buttonPrimary,
   .buttonSecondary {
     width: 100%;
   }
 
   .scrollingRibbon {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    margin-top: 4px;
+    padding: 16px 18px;
   }
 }
 

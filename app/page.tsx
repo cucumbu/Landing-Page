@@ -4,6 +4,40 @@ import { useState } from 'react'
 import BetaModal from '@/components/BetaModal'
 import styles from '@/components/Home.module.css'
 
+function AzureLogo({ size = 16 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 96 96"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id="az1" x1="0.677" y1="0.166" x2="0.427" y2="0.987" gradientUnits="objectBoundingBox">
+          <stop offset="0" stopColor="#114a8b" />
+          <stop offset="1" stopColor="#0669bc" />
+        </linearGradient>
+        <linearGradient id="az2" x1="0.372" y1="0.133" x2="0.563" y2="0.894" gradientUnits="objectBoundingBox">
+          <stop offset="0" stopOpacity=".3" />
+          <stop offset=".071" stopOpacity=".2" />
+          <stop offset=".321" stopOpacity=".1" />
+          <stop offset=".623" stopOpacity=".05" />
+          <stop offset="1" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id="az3" x1="0.073" y1="0.166" x2="0.921" y2="0.987" gradientUnits="objectBoundingBox">
+          <stop offset="0" stopColor="#3ccbf4" />
+          <stop offset="1" stopColor="#2892df" />
+        </linearGradient>
+      </defs>
+      <path d="M33.338 6.544h26.038L33.643 89.954a4.148 4.148 0 01-3.93 2.817H8.5a4.144 4.144 0 01-3.924-5.47L29.408 9.36a4.148 4.148 0 013.93-2.816z" fill="url(#az1)" />
+      <path d="M71.175 60.677H29.553a1.911 1.911 0 00-1.3 3.31l26.947 25.16a4.171 4.171 0 002.85 1.124h23.773z" fill="url(#az2)" />
+      <path d="M33.338 6.544a4.118 4.118 0 00-3.939 2.854L4.614 87.24a4.141 4.141 0 003.887 5.531h20.575a4.443 4.443 0 003.4-2.855l4.966-14.638 17.751 16.579a4.246 4.246 0 002.666.944H81.24L71.024 60.677l-29.781.007L56.477 6.544z" fill="url(#az3)" />
+      <path d="M66.592 9.36a4.144 4.144 0 00-3.926-2.816H33.648a4.146 4.146 0 013.926 2.816l24.832 77.941a4.145 4.145 0 01-3.926 5.47h29.018a4.145 4.145 0 003.926-5.47z" fill="#0078d4" />
+    </svg>
+  )
+}
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -34,18 +68,26 @@ export default function Home() {
             <p className={styles.heroText}>
               Turn every tool into a trusted teammate. Ask your agent to join a
               meeting, draft the email, or sync Slack threads while you stay
-              focused and brainstrong. Meet Cucumbu, your memory driven agent
-              that joins meetings, writes follow ups, and learns from you over
-              time.
+              focused and brainstrong.
             </p>
             <div className={styles.heroActions}>
               <button 
                 className={`${styles.button} ${styles.buttonPrimary}`}
                 onClick={() => setIsModalOpen(true)}
               >
-                Start with beta
+                Start free trial
               </button>
-              <a className={`${styles.button} ${styles.buttonSecondary}`} href="#features">See features</a>
+              <a className={`${styles.button} ${styles.buttonSecondary}`} href="mailto:hello@cucumbu.ai">Book a demo</a>
+            </div>
+            <div className={styles.heroSubtext}>
+              <span className={styles.heroSubtextItem}>
+                <AzureLogo size={16} />
+                <span>Backed by Microsoft Azure</span>
+              </span>
+              <span className={styles.heroSubtextDot} aria-hidden="true">·</span>
+              <span>No credit card</span>
+              <span className={styles.heroSubtextDot} aria-hidden="true">·</span>
+              <span>500+ teams</span>
             </div>
           </div>
           <div className={styles.heroPanel}>
