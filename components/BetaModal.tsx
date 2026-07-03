@@ -30,7 +30,7 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
       if (data.success) {
         setMessage({
           success: true,
-          text: 'Sign up successful. We will notify you once cucumbu is available in beta.',
+          text: 'Sign up successful. We will notify you once cucumbu launches this October.',
         })
         ;(e.target as HTMLFormElement).reset()
         setTimeout(() => {
@@ -56,8 +56,8 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
         <button className={styles.modalClose} onClick={onClose}>
           &times;
         </button>
-        <h2>Join Beta</h2>
-        <p>Get early access to cucumbu and be among the first to transform your workspace with autonomous AI.</p>
+        <h2>Launching this October</h2>
+        <p>Get on the waitlist for Cucumbu and be among the first to transform your workspace with autonomous AI when we launch this October.</p>
 
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
@@ -86,7 +86,7 @@ export default function BetaModal({ isOpen, onClose }: BetaModalProps) {
             <textarea id="message" name="message" rows={4} />
           </div>
           <button type="submit" className={styles.submitButton} disabled={isLoading}>
-            {isLoading ? 'Joining...' : 'Join Beta'}
+            {isLoading ? 'Joining...' : 'Get on the waitlist'}
           </button>
         </form>
 

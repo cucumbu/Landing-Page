@@ -52,7 +52,7 @@ export default function Home() {
           <a href="#how-it-works">how it works</a>
           <a href="#integrations">integrations</a>
           <button className={styles.navCta} onClick={() => setIsModalOpen(true)}>
-            join beta
+            launching this october
           </button>
         </nav>
       </header>
@@ -62,16 +62,17 @@ export default function Home() {
           <div className={styles.heroCopy}>
             <h1>autonomous AI for your workspace</h1>
             <p className={styles.heroText}>
-              Turn every tool into a trusted teammate. Ask your agent to join a
-              meeting, draft the email, or sync Slack threads while you stay
-              focused and brainstrong.
+              Turn every tool into a trusted teammate. Cucumbu is launching
+              this October, bringing an agent that can join a meeting, draft
+              the email, or sync Slack threads while you stay focused and
+              brainstrong.
             </p>
             <div className={styles.heroActions}>
               <button
                 className={`${styles.button} ${styles.buttonPrimary}`}
                 onClick={() => setIsModalOpen(true)}
               >
-                Start with beta
+                Launching this October
               </button>
               <a
                 className={`${styles.button} ${styles.buttonSecondary}`}
@@ -223,9 +224,9 @@ export default function Home() {
             <p className={styles.sectionEyebrow}>integrations</p>
             <h2>Native support for the tools your team already uses.</h2>
             <p>
-              At launch, support will start with a focused set of core apps, so
-              not every integration shown or requested will be available on day
-              one.
+              When Cucumbu launches this October, support will start with a
+              focused set of core apps, so not every integration shown or
+              requested will be available on day one.
             </p>
           </div>
 
@@ -251,12 +252,13 @@ export default function Home() {
                 from them, not just follows rules.
               </p>
             </div>
-            <a
+            <button
               className={`${styles.button} ${styles.buttonPrimary} ${styles.buttonLarge}`}
-              href="mailto:team@cucumbu.com"
+              type="button"
+              onClick={() => setIsModalOpen(true)}
             >
-              Join early access
-            </a>
+              Launching this October
+            </button>
           </div>
         </section>
       </main>
